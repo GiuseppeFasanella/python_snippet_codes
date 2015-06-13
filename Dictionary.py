@@ -18,8 +18,8 @@ hist[variable][detector_region]=ROOT.TH1F(...)
 # Io la vedo come una mappa a una chiave "0_10" e piu' valori: ptmin, ptmax, 
 # poi ci puoi mettere il binning, le opzioni di drawing. E insomma... e' potente
 region={}
-region['0_10']=dict(name='ptEE0_10',ptmin=0.,ptmax=10.) # La regione 0_10 e' definita da un ptmin=0 e un ptmax=10
-region['10_20']=dict(name='ptEE10_20',ptmin=10.,ptmax=20.)
+region['0_10']=dict(title='hello',ptmin=0.,ptmax=10.) # La regione 0_10 e' definita da un ptmin=0 e un ptmax=10
+region['10_20']=dict(title='hello again',ptmin=10.,ptmax=20.)
 
 # A un certo punto ti serve sapere il ptmin associato alla region['0_10']
 region['0_10']['ptmin']
