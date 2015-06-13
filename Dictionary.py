@@ -22,4 +22,10 @@ region['0_10']=dict(title='hello',ptmin=0.,ptmax=10.) # La regione 0_10 e' defin
 region['10_20']=dict(title='hello again',ptmin=10.,ptmax=20.)
 
 # A un certo punto ti serve sapere il ptmin associato alla region['0_10']
-region['0_10']['ptmin']
+print region['0_10']['ptmin']
+# E posso fare cose potentissime, tipo
+if region['0_10']['ptmin'] > x: # Se il ptmin associato alla regione 0_10 e' maggiore di x bla bla
+  something
+else:
+  something else
+
