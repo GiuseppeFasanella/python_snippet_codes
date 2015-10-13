@@ -3,7 +3,8 @@
 //.L codice.C++ (in questo modo hai un .so
 
 nel python
-Load()
+ROOT.gSystem.Load("../EffSigma/EffSigma_C.so")
+
 
 Per chiamarlo 
-ROOT.coso (Importante questo ROOT. all'inizio)
+ROOT.EffSigma(inputs) (Importante questo ROOT. all'inizio)
