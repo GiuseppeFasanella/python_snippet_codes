@@ -8,3 +8,5 @@ ROOT.gSystem.Load("../EffSigma/EffSigma_C.so")
 
 Per chiamarlo 
 ROOT.EffSigma(inputs) (Importante questo ROOT. all'inizio)
+
+e funziona
