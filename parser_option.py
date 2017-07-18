@@ -15,10 +15,10 @@ args = parser.parse_args()
 
 
 ####Examples###########                                                                                                                                               
-if options.Method=="MaxLikelihoodFit":
+if args.Method=="MaxLikelihoodFit":
     print "Do something!"
 
-if options.doRatio:
+if args.doRatio:
     print "doRatio is true if you call parser_option.py -r"
 
 
