@@ -1,4 +1,29 @@
 #!/usr/bin/env python
+import argparse
+
+parser = argparse.ArgumentParser(description='my options parser')
+parser.add_argument("-M","--Method", dest="Method") #python prog.py -M something ==> args.Method is now set to something                                              
+parser.add_argument("-r","--doRatio",action="store_true") # python parser_option.py -r => options.doRatio is now true                                                 
+parser.add_argument("-p","--path",dest="path",default="",type="str") #python parser option.py -p "whatever" => options.path is "whatever"                             
+parser.add_argument("-v","--verbose",dest="verbose",action="store_true")
+parser.add_argument("-a","--append",dest="append",default="",help="Append string to filename")
+parser.add_argument("","--sideband",dest="sideband",default=False,action="store_true")
+parser.add_argument("","--addline",action="append",type="str",help="add lines to the plot file.root:color:linestyle:legend entry", default = [])
+
+
+args = parser.parse_args()
+
+
+####Examples###########                                                                                                                                               
+if options.Method=="MaxLikelihoodFit":
+    print "Do something!"
+
+if options.doRatio:
+    print "doRatio is true if you call parser_option.py -r"
+
+
+#################################################################################################
+#The old way was very similar to this one but using optparse (now deprecated)
 
 #parser.add_option("-short","--Long",dest="destination")
 #default action is "store"
