@@ -9,6 +9,10 @@ parser.add_argument("-v","--verbose",dest="verbose",action="store_true")
 parser.add_argument("-a","--append",dest="append",default="",help="Append string to filename")
 parser.add_argument("","--sideband",dest="sideband",default=False,action="store_true")
 parser.add_argument("","--addline",action="append",type="str",help="add lines to the plot file.root:color:linestyle:legend entry", default = [])
+#pass a list 
+parser.add_argument("-p","--point", dest='point',nargs='*', default='') #'*' stands for 0 or more
+#python prog.py --point 1 8 9 9
+#you'll have args.point as a list [1,8,9,9]
 
 
 args = parser.parse_args()
