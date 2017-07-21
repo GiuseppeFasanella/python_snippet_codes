@@ -3,7 +3,12 @@ import argparse
 
 parser = argparse.ArgumentParser(description='my options parser')
 parser.add_argument("-M","--Method", dest="Method") #python prog.py -M something ==> args.Method is now set to something                                              
-parser.add_argument("-r","--doRatio",action="store_true") # python parser_option.py -r => options.doRatio is now true                                                 
+parser.add_argument("-r","--doRatio",action="store_true") # python parser_option.py -r => options.doRatio is now true    
+#Se invece vuoi poter settare una variabile true o false al run time, fai cosi'
+import distutils.util
+#python BDT_Model_predictor.py --roll=False (altrimenti args.roll is set to true)       
+parser.add_argument("-r","--roll", dest='roll',default=True,type=distutils.util.strtobool) 
+
 parser.add_argument("-p","--path",dest="path",default="",type="str") #python parser option.py -p "whatever" => options.path is "whatever"                             
 parser.add_argument("-v","--verbose",dest="verbose",action="store_true")
 parser.add_argument("-a","--append",dest="append",default="",help="Append string to filename")
