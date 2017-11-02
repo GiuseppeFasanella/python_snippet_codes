@@ -1,5 +1,5 @@
+##########Esempio 1 (che ho messo in opera)
 df['99th_percentile'] = df[cols].apply(lambda x: numpy.percentile(x, 99), axis=1)
-
 #I'm assuming here that the variable 'cols' contains a list of the columns you want to include in the percentile 
 #(You obviously can't use the Description in your calculation, for example).
 #What this code does is loops over rows in the dataframe, and for each row, computes the numpy.percentile to get the 99th percentile. 
