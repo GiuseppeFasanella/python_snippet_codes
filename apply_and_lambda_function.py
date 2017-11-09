@@ -1,3 +1,10 @@
+##########Esempio 0
+The apply method accepts a python function which should have a single parameter.
+df[["YourColumns"]].apply(someFunction)
+
+If you have more than 1 argument, use lambda function inside apply
+my_series.apply((lambda x: your_func(a,b,c,d,...,x))) 
+
 ##########Esempio 1 (che ho messo in opera)
 df['99th_percentile'] = df[cols].apply(lambda x: numpy.percentile(x, 99), axis=1)
 #I'm assuming here that the variable 'cols' contains a list of the columns you want to include in the percentile 
