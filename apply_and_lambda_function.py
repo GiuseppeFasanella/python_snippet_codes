@@ -12,6 +12,23 @@ df['99th_percentile'] = df[cols].apply(lambda x: numpy.percentile(x, 99), axis=1
 #What this code does is loops over rows in the dataframe, and for each row, computes the numpy.percentile to get the 99th percentile. 
 #You'll need to import numpy.
 
+
+##########Esempio master: vuoi fare un'operazione complessa
+def decision(x,model_params):
+                keep_date=0
+                if x[0] >model_params['min_odd_capacity']:
+                    #to prevent taking decisions on few farms                                                                                                                           
+                    if x[1] > model_params['min_odd_ratio']:
+                        keep_date=1
+                else:
+                    #if the capacity of the farms where we know the odds is too small,                                                                                                  
+                    #do not take any decision and discard nothing                                                                                                                       
+                    keep_date=1
+                return keep_date
+
+df_keep=df_odd[['total_power','odd_ratio']].apply(lambda x : decision(x,model_params),axis=1).index
+
+
 ###########Esempio 2 (piu' complesso, ancora non lo capisco)
 sum2=reduce(lambda x,y: x+y, map(lambda z,z*z, list))
 # Questa e' l'idea per fare le somme in quadratura
