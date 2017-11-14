@@ -13,7 +13,7 @@ df['99th_percentile'] = df[cols].apply(lambda x: numpy.percentile(x, 99), axis=1
 #You'll need to import numpy.
 
 
-##########Esempio master: vuoi fare un'operazione complessa
+##########Esempio master: vuoi fare un'operazione complessa, x e' una serie/lista
 def decision(x,model_params):
                 keep_date=0
                 if x[0] >model_params['min_odd_capacity']:
