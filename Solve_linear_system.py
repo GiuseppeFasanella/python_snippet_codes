@@ -6,6 +6,12 @@ from scipy.sparse.linalg import aslinearoperator
 M = matrix( [[1,0],[0,1]])
 A = aslinearoperator( M )
 b = [6, 4]
+###########Se invece hai un df ##################
+M=matrix(df[[NN_model,SUPSI_model]].head(20).tail(2).values)
+A = aslinearoperator( M )
+b=df[[target]].head(20).tail(2)
+#################################################
+
 #bounds on variables if they are not default (x_i > 0)                                                                                                                                  
 #Find a way to define bounds on variables                                                                                                                                               
 #x0_bounds = (None, None)                                                                                                                                                               
