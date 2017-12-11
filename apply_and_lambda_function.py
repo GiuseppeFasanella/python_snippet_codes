@@ -6,6 +6,7 @@ If you have more than 1 argument, use lambda function inside apply
 my_series.apply((lambda x: your_func(a,b,c,d,...,x))) 
 
 ##########Esempio 1 (che ho messo in opera)
+# cols e' una lista, percio' df[cols] e' un dataframe!
 df['99th_percentile'] = df[cols].apply(lambda x: numpy.percentile(x, 99), axis=1)
 #I'm assuming here that the variable 'cols' contains a list of the columns you want to include in the percentile 
 #(You obviously can't use the Description in your calculation, for example).
