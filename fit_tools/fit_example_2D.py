@@ -20,8 +20,11 @@ Z = z.reshape(size)
 z_noise = z + .2*np.random.randn(len(z))
 Z_noise = z_noise.reshape(size)
 
-ydata = z_noise
-popt, pcov = curve_fit(plane, xdata, ydata)
+zdata = z_noise
+popt, pcov = curve_fit(plane, xdata, zdata)
+#xdata=[[ 1. 1.5 2 ....]
+#       [ y y y y y y  ]
+#zdata=[ z1 z2 ........]
 print "original: {}\nfitted: {}".format(original, popt)
 z_fit = plane(xdata, *popt)
 Z_fit = z_fit.reshape(size)
