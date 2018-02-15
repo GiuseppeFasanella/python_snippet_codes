@@ -1,5 +1,11 @@
 side_x = [1,2,3] #x points you want to consider                                                                                                                                         
-side_y = [4,5,6] #y points you want to consider                                                                                                                                         
+side_y = [4,5,6] #y points you want to consider      
+################################################
+#This is in case you want a certain xmin, xmax and you want to interpolate 100 points in between
+limits = [1,3,4,6]
+side_x = np.linspace(limits[0], limits[1], 100)
+side_y = np.linspace(limits[2], limits[3], 100)
+################################################
 X1, X2 = np.meshgrid(side_x, side_y) ##create the 2D grid                                                                                                                               
 #X1 = [[1 2 3]                                                                                                                                                                          
 #      [1 2 3]                                                                                                                                                                          
