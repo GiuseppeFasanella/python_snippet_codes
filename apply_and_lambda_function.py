@@ -1,3 +1,7 @@
+#NOTA: non ho capito bene la differenza tra apply e map
+#This also works
+df_DET['forecastdate']=df_DET['forecastdate'].map(lambda t: t.replace(hour=0))
+
 ##########Esempio 0
 The apply method accepts a python function which should have a single parameter.
 df[["YourColumns"]].apply(someFunction)
