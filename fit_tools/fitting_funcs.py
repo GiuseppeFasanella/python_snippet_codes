@@ -7,6 +7,9 @@ def exp(x, a, b, c):
 def pol1(x, a, b):
     return a *x + b
 
+def pol2(x, a, b, c):
+    return a*x*x + b*x + c
+
 
 ###2D functions
 ###How to arrange the grid of independent variables --> see arrange_2D.py
