@@ -1,3 +1,6 @@
+####Esempio definitivo in:
+
+
 ###############################
 #Esempio master: hai uno script molto bello che chiami con python prog.py --id 678
 #Ora di id ce ne sono parecchio --> parallelizza cosi'
