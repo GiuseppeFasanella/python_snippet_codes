@@ -13,7 +13,7 @@ class MissingTrainTestData(Exception):
     """When a lack of data is present and you can't train/test the network"""
     pass
 
-###A questo punto definisci una funzione di wrapping
+###A questo punto definisci una funzione di wrapping, diaframma tra il caso non parallel e il caso parallel che sappia gestire eccezioni varie e argomenti
 def par_for_wrap(func, *args, **kwargs):
     """ wrapper for functions to deal with missing data when working in parrallel                                                                                                       
         and handle the traceback properly                                                                                                                                               
