@@ -1,3 +1,6 @@
+Nota preliminare:
+
+in ogni sottodirectory ci deve essere un file __init__.py
 ```
 Se hai una struttua in sottocartelle, e molte librerie sono altrove rispetto 
 alla cartella da dove lanci il codice, puoi fare cosi'
