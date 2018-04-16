@@ -13,7 +13,10 @@ import MyFunctions (anche se MyFunctions non e' nel path dove tu lanci il codice
 
 ```
 supponiamo ora invece che sta nella cartella parente a dove c'e' il main
-import os,sys,inspect                                                                                                                     currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))                                                      parentdir = os.path.dirname(currentdir)                                                                                                    sys.path.insert(0,parentdir)   
+import os,sys,inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))                                                    
+parentdir = os.path.dirname(currentdir)                                                                                                 
+sys.path.insert(0,parentdir)   
 
 E ora puoi fare
 import file_che_si_trova_nella_parentdir
