@@ -26,5 +26,5 @@ pool_result = [pool.apply_async(func, args=(arg1, arg2)) for arg1 in args_loop_l
 for i in pool_result:
     result = i.get()
 
-## Then, to kill this wild beast here
-kill -9 $(ps -ef | grep gfasane | grep python | grep lad_regr | awk '{print$2}')
+## Then, to kill this wild beast here in shell
+#kill -9 $(ps -ef | grep gfasane | grep python | grep name_of_main_program | awk '{print$2}')
