@@ -1,3 +1,12 @@
+### Qua la malattia e' questa: in python per parallelizzare puoi utilizzare multi_process o multithread
+### Multithread sa utilizzare bene la memoria: nel senso che se esiste un oggetto globale, 
+### tutti i workers lo hanno in comune e non se lo copiano. MA, per colpa del GIL (Global Interpreter Lock) 
+### sara' usato un solo core (!)
+
+### Multiprocess invece non usa bene la memoria: ogni worker si copia l'oggetto globale.
+### Piu' cores vengono utilizzati, ma in memoria esistono N copie inutili di uno stesso oggetto globale
+### Qui sotto riporto un modo, che mi pare funzionare, per sfruttare multiprocess con un oggetto grande e globale.
+
 import itertools
 import time
 from multiprocessing import Process, Pipe
