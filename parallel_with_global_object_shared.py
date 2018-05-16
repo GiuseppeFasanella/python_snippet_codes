@@ -43,3 +43,5 @@ def run_normal_parallel(huge_dict):
 
 
 run_normal_parallel(huge_dict)
+## Then, to kill this wild beast here in shell
+#kill -9 $(ps -ef | grep gfasane | grep python | grep name_of_main_program | awk '{print$2}')
