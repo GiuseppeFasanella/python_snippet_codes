@@ -51,3 +51,6 @@ if len(error_messages)==0:
     logger.info('**************************************** ')
 else:
     logger.error(error_messages)
+
+## Then, to kill this wild beast here in shell
+#kill -9 $(ps -ef | grep gfasane | grep python | grep name_of_main_program | awk '{print$2}')                               
