@@ -2,9 +2,12 @@ import numpy as np
 import sys
 
 FConfig={
-        'dbConnectionString_Source' : 'DWENP_EXA.WORLD',
-        'dbConnectionString_Password' : 'dh_den_stage',
-        'dbConnectionString_Username' : 'dh_den_stage',
+    'dbConnectionString_Main' : 'Use_args', #'PROD','TEST', 'Use_args'                                                                                                                  
+    'dbConnectionString_Prod' : 'DWHP',
+    'dbConnectionString_Test' : 'DWHD',
+    'dbConnectionString_Source' : 'DWHP',
+    'dbConnectionString_Password' : 'den_da_interface',
+    'dbConnectionString_Username' : 'den_da_interface',
     }
 
 import MeteoDB as md
