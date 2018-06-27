@@ -1,5 +1,5 @@
 #NOTA: non ho capito bene la differenza tra apply e map
-#This also works
+#This works fine if you work on a series df_DET['forecastdate']
 df_DET['forecastdate']=df_DET['forecastdate'].map(lambda t: t.replace(hour=0))
 #map e' molto piu' veloce di apply quindi secondo me map e' correttamente vettorializzato
 
