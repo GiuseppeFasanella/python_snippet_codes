@@ -39,3 +39,7 @@ db.execute_str(sql_str)
 #print(np.array(db.cursor.fetchall ())) #In case you want to fetch the query results                                                                                                    
 db.disconnect()
 
+##### Per ritornare direttamente un bel dataframe: fai cosi'
+df = md.return_sql_query(sql_str, FConfig)
+
+
