@@ -12,6 +12,11 @@ tu sei in una directory
 supponiamo esiste un python MeteoLib/MyFunctions.py
 export PYTHONPATH=$PYTHONPATH:/home/gfasanella/workspace/MeteoLib
 
+Oppure, credo che direttamente nel codice puoi fare:
+import sys
+sys.path.append('/home/gfasanella/workspace/MeteoLib')
+
+
 e nel codice puoi fare
 import MyFunctions (anche se MyFunctions non e' nel path dove tu lanci il codice)
 
