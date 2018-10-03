@@ -22,6 +22,10 @@ forecastdate=datetime.now()
 ## Put no ; at the end (invalid character)                                                                                                                                              
 ## Use double quotation to hold the query (single ones are used for strings in the query)  
 
+### Da datetime a int tale da poter apparire in una query
+## start_date = start_date.strftime('%Y%m%d')
+
+
 sql_str=("merge into F_PRODUCTION_FARM_H T using ("+
          "select forecastdate, valuedate, farm_id, value_10, value_25, value_75, value_90"+
          " from f_production_farm_h_sens"+
