@@ -19,7 +19,7 @@ popt, pcov = curve_fit(func, xdata, ydata)
 plt.plot(xdata, func(xdata, *popt), 'r-',
          label='fit: a=%5.3f, b=%5.3f, c=%5.3f' % tuple(popt))
 
-popt, pcov = curve_fit(func, xdata, ydata, bounds=(0, [3., 1., 0.5]))
+popt, pcov = curve_fit(func, xdata, ydata, bounds=(0, [3., 1., 0.5])) #bound minimi 0; bound max=3.,1.,0.5
 #bounds : 2-tuple of array_like, optional
 #Lower and upper bounds on parameters. Defaults to no bounds. 
 #Each element of the tuple must be either an array with the length equal to the number of parameters, 
