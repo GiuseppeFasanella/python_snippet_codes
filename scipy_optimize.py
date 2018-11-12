@@ -3,6 +3,7 @@ https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_square
 >>> from scipy.optimize import least_squares
 
 >>> def fun(x, t, y): #x are the parameters, t and y are the inputs
+        ## Note that the function must return the vector of the residuals!!!
 ...     return x[0] + x[1] * np.exp(x[2] * t) - y
 ...
 >>> x0 = np.array([1.0, 1.0, 0.0]) #x0 are the initial parameters
