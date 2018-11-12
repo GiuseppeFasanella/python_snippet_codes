@@ -1,3 +1,5 @@
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html
+  
 >>> from scipy.optimize import least_squares
 
 >>> def fun(x, t, y): #x are the parameters, t and y are the inputs
