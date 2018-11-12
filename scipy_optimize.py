@@ -8,3 +8,9 @@ Compute a standard least-squares solution:
 
 >>>
 >>> res_lsq = least_squares(fun, x0, args=(t_train, y_train))
+
+>>> res_1.x
+array([ 1.,  1.])
+>>> res_1.cost
+9.8669242910846867e-30
+>>> res_1.optimality
