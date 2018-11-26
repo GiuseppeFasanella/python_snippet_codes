@@ -15,6 +15,10 @@ parser.add_argument("","--sideband",dest="sideband",default=False,action="store_
 parser.add_argument("","--addline",action="append",type="str",help="add lines to the plot file.root:color:linestyle:legend entry", default = [])
 #pass a list 
 parser.add_argument("-p","--point", dest='point',nargs='*', default=[0,1]) #'*' stands for 0 or more use 
+##pass a 'datetime'
+parser.add_argument("--train_st", default='',help="pass it as '20150101 00'")
+
+    
 #call it as
 #python prog.py --point 1 8 9 9
 #you'll have args.point as a list [1,8,9,9]
