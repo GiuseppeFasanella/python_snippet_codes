@@ -1,3 +1,4 @@
+import glpk
 ##M is a pandas dataframe
 ##M contains competing models, last column of ones, the target variable (actuals)
 target='Actual'
