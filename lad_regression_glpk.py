@@ -39,7 +39,7 @@ lp.cols.add(len(M.columns.values))
 i=0
 for x in lp.cols:      #Iterate over all columns
     x.name = 'x%d' % x.index # Name them x0, x1, x2,...
-    if i<p-1:
+    if i<p-1: # competing models bouns
         x.bounds = 0.0, 1        # Set bound 0 <= xi < 1
     elif i==p-1:
         x.bounds = None, None     # Intercept has no bound
