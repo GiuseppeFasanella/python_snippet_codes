@@ -18,6 +18,7 @@ dfI_v = pd.DataFrame(-np.eye(n, n),
 M=pd.concat([M,dfI_u,dfI_v],axis=1)
 cols=[1 for m in range(p-1)] + [0 for m in range(p-1,len(M.columns.values))]
 
+### Sum of weights must be equal to 1. (less than 1., greater than 1., hence =1.)
 M.loc[M.index.values[-1]+1] = cols
 M.loc[M.index.values[-1]+1] = cols
 b.loc[b.index.values[-1]+1] = 1
