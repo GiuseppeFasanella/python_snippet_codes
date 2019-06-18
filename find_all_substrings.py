@@ -13,3 +13,22 @@ def findAllSubstrings(s):
     return substrings
     
 s='abc'
+
+### Trova tutte le ntuplette
+def findAllNplets(arr,N):
+    Nplets  = []
+    for i in range(0, len(arr) - N + 1): #starting point
+        j=i+N
+        Nplets.append(arr[i:j])
+    return Nplets
+
+
+arr = [1, 2, 2, 4]
+
+print(findAllNplets(arr,3))
+Giuseppe Fasanella ran 24 lines of Python 3 (finished in 1.68s):
+
+[[1, 2, 2], [2, 2, 4]]
+
+>>> 
+
