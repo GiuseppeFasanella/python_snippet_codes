@@ -1,0 +1,29 @@
+import defines as defines
+
+from optparse import OptionParser, make_option
+
+option_list = [
+    make_option("-c", "--config",default=None),
+]
+
+parser = OptionParser(option_list=option_list)
+(options, args) = parser.parse_args()
+
+
+print(options)
+print(options.config)
+
+#### 
+config = defines.ETL_CONFIG.copy() ##same thing for model config
+
+
+if options.config is not None:
+    import importlib
+    defines_diff = importlib.import_module(options.config)
+    config_diff = defines_diff.ETL_CONFIG.copy()
+    config.update(config_diff)
+
+print(config)
+
+
+   
