@@ -5,7 +5,7 @@ df_DET['forecastdate']=df_DET['forecastdate'].map(lambda t: t.replace(hour=0))
 
 ##########Esempio 0
 The apply method accepts a python function which should have a single parameter.
-df[["YourColumns"]].apply(someFunction)
+df["YourColumns"].apply(someFunction)
 
 If you have more than 1 argument, use lambda function inside apply
 my_series.apply((lambda x: your_func(a,b,c,d,...,x))) 
