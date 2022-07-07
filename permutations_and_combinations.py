@@ -37,7 +37,7 @@ comb = list(combinations(my_list, L))
 #(1,3)
 #(2,3)
 
-## 1.3 Combinations without replacements
+## 1.3 Combinations with re-insertion
 from itertools import combinations_with_replacement
 my_list = [1,2,3]
 L=2
